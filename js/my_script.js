@@ -6,11 +6,31 @@
  *
  */
 
- let cognomeIndicato = prompt("Quale è il tuo Cognome?");
 
- let listaCognomi = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
+
+
+//  Creo una array con alcuni cognomi
+
+ let listaCognomi = ["bianchi", "neri", "rossi", "verdi", "gialli"];
  
- listaCognomi.push(cognomeIndicato);
- 
- listaCognomi.sort () 
+ for (var i = 0; i < listaCognomi.length; i++){
+    listaCognomi[i] = listaCognomi[i].toUpperCase();
+}
  console.log (listaCognomi);
+
+ 
+let cognomeIndicato = prompt("Quale è il tuo Cognome?"); //  Chiedo all'utente il suo Cognome
+let cognomeMaiuscolo = cognomeIndicato.toUpperCase();    //  Trasformo il cognome in Maiuscolo
+listaCognomi.push(cognomeMaiuscolo); 
+console.log(listaCognomi);
+
+for (let x=0; x<listaCognomi.length; x++) { 
+    listaCognomi.sort (); 
+    console.log (listaCognomi[x]);
+    // listaCognomi.indexOf(x+1);
+    // console.log (listaCognomi);
+}
+
+
+
+
