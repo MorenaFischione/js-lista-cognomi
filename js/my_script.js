@@ -13,6 +13,7 @@
 
  let listaCognomi = ["bianchi", "neri", "rossi", "verdi", "gialli"];
  
+ //creo un ciclo for per rendere tutti gli elementi maiuscoli 
  for (var i = 0; i < listaCognomi.length; i++){
     listaCognomi[i] = listaCognomi[i].toUpperCase();
 }
@@ -21,15 +22,24 @@
  
 let cognomeIndicato = prompt("Quale è il tuo Cognome?"); //  Chiedo all'utente il suo Cognome
 let cognomeMaiuscolo = cognomeIndicato.toUpperCase();    //  Trasformo il cognome in Maiuscolo
-listaCognomi.push(cognomeMaiuscolo); 
-console.log(listaCognomi);
+console.log (cognomeMaiuscolo);                          //  Ordino in maniera alfabetica la lista
 
-for (let x=0; x<listaCognomi.length; x++) { 
-    listaCognomi.sort (); 
-    console.log (listaCognomi[x]);
-    // listaCognomi.indexOf(x+1);
-    // console.log (listaCognomi);
+
+
+let listaCognomiAggiornata = listaCognomi.concat(cognomeMaiuscolo);
+console.log (listaCognomiAggiornata);
+
+// creo un ciclo for per stampare in console i nomi nell'ordine corretto
+for (let x=0; x<listaCognomiAggiornata.length; x++) { 
+    listaCognomiAggiornata.sort (); 
+    console.log (listaCognomiAggiornata[x]);
 }
+
+console.log (listaCognomiAggiornata.indexOf(listaCognomi));
+
+
+
+
 
 
 
